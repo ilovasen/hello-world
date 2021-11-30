@@ -1,0 +1,9 @@
+{
+	"name": "AssetManagement",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e5d9ee3c-50cf-4454-84d0-8ec1f230f967",
+		"tenantId": "a40c0d68-338e-44ef-ab17-812ee42d12c7"
+	}
+}

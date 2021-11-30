@@ -1,0 +1,501 @@
+{
+	"name": "CSVBrazil",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "UploadBrazil",
+				"container": "ipfinancesync"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DateVersion",
+				"type": "String"
+			},
+			{
+				"name": "Segment",
+				"type": "String"
+			},
+			{
+				"name": "CountryName",
+				"type": "String"
+			},
+			{
+				"name": "ProjectName",
+				"type": "String"
+			},
+			{
+				"name": "Version",
+				"type": "String"
+			},
+			{
+				"name": "RealName",
+				"type": "String"
+			},
+			{
+				"name": "ModelDeveloper",
+				"type": "String"
+			},
+			{
+				"name": "FileName",
+				"type": "String"
+			},
+			{
+				"name": "DataCategory",
+				"type": "String"
+			},
+			{
+				"name": "Denomination",
+				"type": "String"
+			},
+			{
+				"name": "Curr",
+				"type": "String"
+			},
+			{
+				"name": "33969,000000",
+				"type": "String"
+			},
+			{
+				"name": "34334,000000",
+				"type": "String"
+			},
+			{
+				"name": "34699,000000",
+				"type": "String"
+			},
+			{
+				"name": "35064,000000",
+				"type": "String"
+			},
+			{
+				"name": "35430,000000",
+				"type": "String"
+			},
+			{
+				"name": "35795,000000",
+				"type": "String"
+			},
+			{
+				"name": "36160,000000",
+				"type": "String"
+			},
+			{
+				"name": "36525,000000",
+				"type": "String"
+			},
+			{
+				"name": "36891,000000",
+				"type": "String"
+			},
+			{
+				"name": "37256,000000",
+				"type": "String"
+			},
+			{
+				"name": "37621,000000",
+				"type": "String"
+			},
+			{
+				"name": "37986,000000",
+				"type": "String"
+			},
+			{
+				"name": "38352,000000",
+				"type": "String"
+			},
+			{
+				"name": "38717,000000",
+				"type": "String"
+			},
+			{
+				"name": "39082,000000",
+				"type": "String"
+			},
+			{
+				"name": "39447,000000",
+				"type": "String"
+			},
+			{
+				"name": "39813,000000",
+				"type": "String"
+			},
+			{
+				"name": "40178,000000",
+				"type": "String"
+			},
+			{
+				"name": "40543,000000",
+				"type": "String"
+			},
+			{
+				"name": "40908,000000",
+				"type": "String"
+			},
+			{
+				"name": "41274,000000",
+				"type": "String"
+			},
+			{
+				"name": "41639,000000",
+				"type": "String"
+			},
+			{
+				"name": "42004,000000",
+				"type": "String"
+			},
+			{
+				"name": "42369,000000",
+				"type": "String"
+			},
+			{
+				"name": "42735,000000",
+				"type": "String"
+			},
+			{
+				"name": "43100,000000",
+				"type": "String"
+			},
+			{
+				"name": "43465,000000",
+				"type": "String"
+			},
+			{
+				"name": "43830,000000",
+				"type": "String"
+			},
+			{
+				"name": "44196,000000",
+				"type": "String"
+			},
+			{
+				"name": "44561,000000",
+				"type": "String"
+			},
+			{
+				"name": "44926,000000",
+				"type": "String"
+			},
+			{
+				"name": "45291,000000",
+				"type": "String"
+			},
+			{
+				"name": "45657,000000",
+				"type": "String"
+			},
+			{
+				"name": "46022,000000",
+				"type": "String"
+			},
+			{
+				"name": "46387,000000",
+				"type": "String"
+			},
+			{
+				"name": "46752,000000",
+				"type": "String"
+			},
+			{
+				"name": "47118,000000",
+				"type": "String"
+			},
+			{
+				"name": "47483,000000",
+				"type": "String"
+			},
+			{
+				"name": "47848,000000",
+				"type": "String"
+			},
+			{
+				"name": "48213,000000",
+				"type": "String"
+			},
+			{
+				"name": "48579,000000",
+				"type": "String"
+			},
+			{
+				"name": "48944,000000",
+				"type": "String"
+			},
+			{
+				"name": "49309,000000",
+				"type": "String"
+			},
+			{
+				"name": "49674,000000",
+				"type": "String"
+			},
+			{
+				"name": "50040,000000",
+				"type": "String"
+			},
+			{
+				"name": "50405,000000",
+				"type": "String"
+			},
+			{
+				"name": "50770,000000",
+				"type": "String"
+			},
+			{
+				"name": "51135,000000",
+				"type": "String"
+			},
+			{
+				"name": "51501,000000",
+				"type": "String"
+			},
+			{
+				"name": "51866,000000",
+				"type": "String"
+			},
+			{
+				"name": "52231,000000",
+				"type": "String"
+			},
+			{
+				"name": "52596,000000",
+				"type": "String"
+			},
+			{
+				"name": "52962,000000",
+				"type": "String"
+			},
+			{
+				"name": "53327,000000",
+				"type": "String"
+			},
+			{
+				"name": "53692,000000",
+				"type": "String"
+			},
+			{
+				"name": "54057,000000",
+				"type": "String"
+			},
+			{
+				"name": "54423,000000",
+				"type": "String"
+			},
+			{
+				"name": "54788,000000",
+				"type": "String"
+			},
+			{
+				"name": "55153,000000",
+				"type": "String"
+			},
+			{
+				"name": "55518,000000",
+				"type": "String"
+			},
+			{
+				"name": "55884,000000",
+				"type": "String"
+			},
+			{
+				"name": "56249,000000",
+				"type": "String"
+			},
+			{
+				"name": "56614,000000",
+				"type": "String"
+			},
+			{
+				"name": "56979,000000",
+				"type": "String"
+			},
+			{
+				"name": "57345,000000",
+				"type": "String"
+			},
+			{
+				"name": "57710,000000",
+				"type": "String"
+			},
+			{
+				"name": "58075,000000",
+				"type": "String"
+			},
+			{
+				"name": "58440,000000",
+				"type": "String"
+			},
+			{
+				"name": "58806,000000",
+				"type": "String"
+			},
+			{
+				"name": "59171,000000",
+				"type": "String"
+			},
+			{
+				"name": "59536,000000",
+				"type": "String"
+			},
+			{
+				"name": "59901,000000",
+				"type": "String"
+			},
+			{
+				"name": "60267,000000",
+				"type": "String"
+			},
+			{
+				"name": "60632,000000",
+				"type": "String"
+			},
+			{
+				"name": "60997,000000",
+				"type": "String"
+			},
+			{
+				"name": "61362,000000",
+				"type": "String"
+			},
+			{
+				"name": "61728,000000",
+				"type": "String"
+			},
+			{
+				"name": "62093,000000",
+				"type": "String"
+			},
+			{
+				"name": "62458,000000",
+				"type": "String"
+			},
+			{
+				"name": "62823,000000",
+				"type": "String"
+			},
+			{
+				"name": "63189,000000",
+				"type": "String"
+			},
+			{
+				"name": "63554,000000",
+				"type": "String"
+			},
+			{
+				"name": "63919,000000",
+				"type": "String"
+			},
+			{
+				"name": "64284,000000",
+				"type": "String"
+			},
+			{
+				"name": "64650,000000",
+				"type": "String"
+			},
+			{
+				"name": "65015,000000",
+				"type": "String"
+			},
+			{
+				"name": "65380,000000",
+				"type": "String"
+			},
+			{
+				"name": "65745,000000",
+				"type": "String"
+			},
+			{
+				"name": "66111,000000",
+				"type": "String"
+			},
+			{
+				"name": "66476,000000",
+				"type": "String"
+			},
+			{
+				"name": "66841,000000",
+				"type": "String"
+			},
+			{
+				"name": "67206,000000",
+				"type": "String"
+			},
+			{
+				"name": "67572,000000",
+				"type": "String"
+			},
+			{
+				"name": "67937,000000",
+				"type": "String"
+			},
+			{
+				"name": "68302,000000",
+				"type": "String"
+			},
+			{
+				"name": "68667,000000",
+				"type": "String"
+			},
+			{
+				"name": "69033,000000",
+				"type": "String"
+			},
+			{
+				"name": "69398,000000",
+				"type": "String"
+			},
+			{
+				"name": "69763,000000",
+				"type": "String"
+			},
+			{
+				"name": "70128,000000",
+				"type": "String"
+			},
+			{
+				"name": "70494,000000",
+				"type": "String"
+			},
+			{
+				"name": "70859,000000",
+				"type": "String"
+			},
+			{
+				"name": "71224,000000",
+				"type": "String"
+			},
+			{
+				"name": "71589,000000",
+				"type": "String"
+			},
+			{
+				"name": "71955,000000",
+				"type": "String"
+			},
+			{
+				"name": "72320,000000",
+				"type": "String"
+			},
+			{
+				"name": "72685,000000",
+				"type": "String"
+			},
+			{
+				"name": "73050,000000",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

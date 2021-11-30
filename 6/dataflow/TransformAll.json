@@ -1,0 +1,55 @@
+{
+	"name": "TransformAll",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "CSVall",
+						"type": "DatasetReference"
+					},
+					"name": "GetFiles"
+				},
+				{
+					"dataset": {
+						"referenceName": "CSVBrazil",
+						"type": "DatasetReference"
+					},
+					"name": "GetFilesBrazil"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable",
+						"type": "DatasetReference"
+					},
+					"name": "sink"
+				},
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTableBrazil",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "Unpivot1"
+				},
+				{
+					"name": "Pivot1"
+				},
+				{
+					"name": "Unpivot2"
+				},
+				{
+					"name": "Pivot2"
+				}
+			],
+			"script": "source(output(\n\t\tDateVersion as string,\n\t\tSegment as string,\n\t\tCountryName as string,\n\t\tProjectName as string,\n\t\tVersion as string,\n\t\tRealName as string,\n\t\tModelDeveloper as string,\n\t\tFileName as string,\n\t\tDataCategory as string,\n\t\tDenomination as string,\n\t\tCurr as string,\n\t\t{33969,0000} as string,\n\t\t{34334,0000} as string,\n\t\t{34699,0000} as string,\n\t\t{35064,0000} as string,\n\t\t{35430,0000} as string,\n\t\t{35795,0000} as string,\n\t\t{36160,0000} as string,\n\t\t{36525,0000} as string,\n\t\t{36891,0000} as string,\n\t\t{37256,0000} as string,\n\t\t{37621,0000} as string,\n\t\t{37986,0000} as string,\n\t\t{38352,0000} as string,\n\t\t{38717,0000} as string,\n\t\t{39082,0000} as string,\n\t\t{39447,0000} as string,\n\t\t{39813,0000} as string,\n\t\t{40178,0000} as string,\n\t\t{40543,0000} as string,\n\t\t{40908,0000} as string,\n\t\t{41274,0000} as string,\n\t\t{41639,0000} as string,\n\t\t{42004,0000} as string,\n\t\t{42369,0000} as string,\n\t\t{42735,0000} as string,\n\t\t{43100,0000} as string,\n\t\t{43465,0000} as string,\n\t\t{43830,0000} as string,\n\t\t{44196,0000} as string,\n\t\t{44561,0000} as string,\n\t\t{44926,0000} as string,\n\t\t{45291,0000} as string,\n\t\t{45657,0000} as string,\n\t\t{46022,0000} as string,\n\t\t{46387,0000} as string,\n\t\t{46752,0000} as string,\n\t\t{47118,0000} as string,\n\t\t{47483,0000} as string,\n\t\t{47848,0000} as string,\n\t\t{48213,0000} as string,\n\t\t{48579,0000} as string,\n\t\t{48944,0000} as string,\n\t\t{49309,0000} as string,\n\t\t{49674,0000} as string,\n\t\t{50040,0000} as string,\n\t\t{50405,0000} as string,\n\t\t{50770,0000} as string,\n\t\t{51135,0000} as string,\n\t\t{51501,0000} as string,\n\t\t{51866,0000} as string,\n\t\t{52231,0000} as string,\n\t\t{52596,0000} as string,\n\t\t{52962,0000} as string,\n\t\t{53327,0000} as string,\n\t\t{53692,0000} as string,\n\t\t{54057,0000} as string,\n\t\t{54423,0000} as string,\n\t\t{54788,0000} as string,\n\t\t{55153,0000} as string,\n\t\t{55518,0000} as string,\n\t\t{55884,0000} as string,\n\t\t{56249,0000} as string,\n\t\t{56614,0000} as string,\n\t\t{56979,0000} as string,\n\t\t{57345,0000} as string,\n\t\t{57710,0000} as string,\n\t\t{58075,0000} as string,\n\t\t{58440,0000} as string,\n\t\t{58806,0000} as string,\n\t\t{59171,0000} as string,\n\t\t{59536,0000} as string,\n\t\t{59901,0000} as string,\n\t\t{60267,0000} as string,\n\t\t{60632,0000} as string,\n\t\t{60997,0000} as string,\n\t\t{61362,0000} as string,\n\t\t{61728,0000} as string,\n\t\t{62093,0000} as string,\n\t\t{62458,0000} as string,\n\t\t{62823,0000} as string,\n\t\t{63189,0000} as string,\n\t\t{63554,0000} as string,\n\t\t{63919,0000} as string,\n\t\t{64284,0000} as string,\n\t\t{64650,0000} as string,\n\t\t{65015,0000} as string,\n\t\t{65380,0000} as string,\n\t\t{65745,0000} as string,\n\t\t{66111,0000} as string,\n\t\t{66476,0000} as string,\n\t\t{66841,0000} as string,\n\t\t{67206,0000} as string,\n\t\t{67572,0000} as string,\n\t\t{67937,0000} as string,\n\t\t{68302,0000} as string,\n\t\t{68667,0000} as string,\n\t\t{69033,0000} as string,\n\t\t{69398,0000} as string,\n\t\t{69763,0000} as string,\n\t\t{70128,0000} as string,\n\t\t{70494,0000} as string,\n\t\t{70859,0000} as string,\n\t\t{71224,0000} as string,\n\t\t{71589,0000} as string,\n\t\t{71955,0000} as string,\n\t\t{72320,0000} as string,\n\t\t{72685,0000} as string,\n\t\t{73050,0000} as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> GetFiles\nsource(output(\n\t\tDateVersion as string,\n\t\tSegment as string,\n\t\tCountryName as string,\n\t\tProjectName as string,\n\t\tVersion as string,\n\t\tRealName as string,\n\t\tModelDeveloper as string,\n\t\tFileName as string,\n\t\tDataCategory as string,\n\t\tDenomination as string,\n\t\tCurr as string,\n\t\t{33969,000000} as string,\n\t\t{34334,000000} as string,\n\t\t{34699,000000} as string,\n\t\t{35064,000000} as string,\n\t\t{35430,000000} as string,\n\t\t{35795,000000} as string,\n\t\t{36160,000000} as string,\n\t\t{36525,000000} as string,\n\t\t{36891,000000} as string,\n\t\t{37256,000000} as string,\n\t\t{37621,000000} as string,\n\t\t{37986,000000} as string,\n\t\t{38352,000000} as string,\n\t\t{38717,000000} as string,\n\t\t{39082,000000} as string,\n\t\t{39447,000000} as string,\n\t\t{39813,000000} as string,\n\t\t{40178,000000} as string,\n\t\t{40543,000000} as string,\n\t\t{40908,000000} as string,\n\t\t{41274,000000} as string,\n\t\t{41639,000000} as string,\n\t\t{42004,000000} as string,\n\t\t{42369,000000} as string,\n\t\t{42735,000000} as string,\n\t\t{43100,000000} as string,\n\t\t{43465,000000} as string,\n\t\t{43830,000000} as string,\n\t\t{44196,000000} as string,\n\t\t{44561,000000} as string,\n\t\t{44926,000000} as string,\n\t\t{45291,000000} as string,\n\t\t{45657,000000} as string,\n\t\t{46022,000000} as string,\n\t\t{46387,000000} as string,\n\t\t{46752,000000} as string,\n\t\t{47118,000000} as string,\n\t\t{47483,000000} as string,\n\t\t{47848,000000} as string,\n\t\t{48213,000000} as string,\n\t\t{48579,000000} as string,\n\t\t{48944,000000} as string,\n\t\t{49309,000000} as string,\n\t\t{49674,000000} as string,\n\t\t{50040,000000} as string,\n\t\t{50405,000000} as string,\n\t\t{50770,000000} as string,\n\t\t{51135,000000} as string,\n\t\t{51501,000000} as string,\n\t\t{51866,000000} as string,\n\t\t{52231,000000} as string,\n\t\t{52596,000000} as string,\n\t\t{52962,000000} as string,\n\t\t{53327,000000} as string,\n\t\t{53692,000000} as string,\n\t\t{54057,000000} as string,\n\t\t{54423,000000} as string,\n\t\t{54788,000000} as string,\n\t\t{55153,000000} as string,\n\t\t{55518,000000} as string,\n\t\t{55884,000000} as string,\n\t\t{56249,000000} as string,\n\t\t{56614,000000} as string,\n\t\t{56979,000000} as string,\n\t\t{57345,000000} as string,\n\t\t{57710,000000} as string,\n\t\t{58075,000000} as string,\n\t\t{58440,000000} as string,\n\t\t{58806,000000} as string,\n\t\t{59171,000000} as string,\n\t\t{59536,000000} as string,\n\t\t{59901,000000} as string,\n\t\t{60267,000000} as string,\n\t\t{60632,000000} as string,\n\t\t{60997,000000} as string,\n\t\t{61362,000000} as string,\n\t\t{61728,000000} as string,\n\t\t{62093,000000} as string,\n\t\t{62458,000000} as string,\n\t\t{62823,000000} as string,\n\t\t{63189,000000} as string,\n\t\t{63554,000000} as string,\n\t\t{63919,000000} as string,\n\t\t{64284,000000} as string,\n\t\t{64650,000000} as string,\n\t\t{65015,000000} as string,\n\t\t{65380,000000} as string,\n\t\t{65745,000000} as string,\n\t\t{66111,000000} as string,\n\t\t{66476,000000} as string,\n\t\t{66841,000000} as string,\n\t\t{67206,000000} as string,\n\t\t{67572,000000} as string,\n\t\t{67937,000000} as string,\n\t\t{68302,000000} as string,\n\t\t{68667,000000} as string,\n\t\t{69033,000000} as string,\n\t\t{69398,000000} as string,\n\t\t{69763,000000} as string,\n\t\t{70128,000000} as string,\n\t\t{70494,000000} as string,\n\t\t{70859,000000} as string,\n\t\t{71224,000000} as string,\n\t\t{71589,000000} as string,\n\t\t{71955,000000} as string,\n\t\t{72320,000000} as string,\n\t\t{72685,000000} as string,\n\t\t{73050,000000} as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> GetFilesBrazil\nGetFiles unpivot(output(\n\t\tCFDate as date,\n\t\t{33969,0000} as string\n\t),\n\tungroupBy(DateVersion,\n\t\tSegment,\n\t\tCountryName,\n\t\tProjectName,\n\t\tVersion,\n\t\tRealName,\n\t\tDataCategory,\n\t\tDenomination,\n\t\tCurr,\n\t\tModelDeveloper,\n\t\tFileName),\n\tlateral: true,\n\tignoreNullPivots: false) ~> Unpivot1\nUnpivot1 pivot(groupBy(DateVersion,\n\t\tSegment,\n\t\tCountryName,\n\t\tProjectName,\n\t\tVersion,\n\t\tRealName,\n\t\tDenomination,\n\t\tCurr,\n\t\tModelDeveloper,\n\t\tCFDate,\n\t\tFileName),\n\tpivotBy(DataCategory),\n\tValue = first({33969,0000}),\n\tcolumnNaming: '$V$N',\n\tlateral: false) ~> Pivot1\nGetFilesBrazil unpivot(output(\n\t\tCFDate as date,\n\t\t{33969,000000} as string\n\t),\n\tungroupBy(DateVersion,\n\t\tSegment,\n\t\tCountryName,\n\t\tProjectName,\n\t\tVersion,\n\t\tRealName,\n\t\tModelDeveloper,\n\t\tFileName,\n\t\tDataCategory,\n\t\tDenomination,\n\t\tCurr),\n\tlateral: true,\n\tignoreNullPivots: false) ~> Unpivot2\nUnpivot2 pivot(groupBy(DateVersion,\n\t\tSegment,\n\t\tCountryName,\n\t\tProjectName,\n\t\tVersion,\n\t\tRealName,\n\t\tModelDeveloper,\n\t\tFileName,\n\t\tCFDate,\n\t\tDenomination,\n\t\tCurr),\n\tpivotBy(DataCategory),\n\tValue = first({33969,000000}),\n\tcolumnNaming: '$N$V',\n\tlateral: true) ~> Pivot2\nPivot1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\ttruncate:true,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\terrorHandlingOption: 'stopOnFirstError') ~> sink\nPivot2 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\ttruncate:true,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\terrorHandlingOption: 'stopOnFirstError') ~> sink1"
+		}
+	}
+}
